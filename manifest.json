@@ -1,0 +1,23 @@
+{
+
+	"name": "Chrome-Vimeo-Controls",
+	"description": "Chrome Extension - Repeat, Speed, Forward and Backward control buttons for Vimeo Player",
+
+	"browser_action": {
+    "default_icon": "images/vimeovideo48.png"
+  	},
+
+	"content_scripts": [ {
+		"all_frames": true,
+		"js": [ "jquery-3.1.1.min.js", "vimeovideo.js" ],
+		"matches": [ "*://vimeo.com/*", "*://player.vimeo.com/*" ],
+		"run_at": "document_end"
+	} ],
+
+	"icons": {
+		"128": "images/vimeovideo128.png",
+		"48": "images/vimeovideo48.png"
+	},
+	"version": "0.0.1.0",
+	"manifest_version": 2
+}
